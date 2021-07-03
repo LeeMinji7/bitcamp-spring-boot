@@ -1,7 +1,7 @@
 import logo from './logo.svg';
 import './App.css';
 
-function App() {
+const App = () => { //람다식
   return (
   <>
     <div class="body_container">
