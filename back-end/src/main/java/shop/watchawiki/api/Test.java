@@ -1,4 +1,4 @@
-package shop.watchawiki.api.api;
+package shop.watchawiki.api;
 
 public class Test {
     public static void main(String[] args) {
