@@ -1,9 +1,11 @@
 package shop.watchawiki.api.movies.domain;
 
 import lombok.*;
+import shop.watchawiki.api.reviews.domain.Reviews;
 
 import javax.persistence.*;
 import java.util.Date;
+import java.util.List;
 
 @Getter
 @Builder
@@ -28,4 +30,7 @@ public class Movies {
     @Column private String summary;     // 줄거리
     @Column private String awards;      // 수상내역
     @Column private String movieProfile;    // 영화이미지
+
+    @OneToMany(fetch = FetchType.LAZY, mappedBy = "movies")
+    private List<Reviews> reviewsList;
 }

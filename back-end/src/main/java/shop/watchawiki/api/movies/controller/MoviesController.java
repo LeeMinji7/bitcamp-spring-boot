@@ -27,7 +27,7 @@ public class MoviesController {
 
     @GetMapping("/count")
     public int count(){
-        return moviesService.count();
+        return (int)moviesService.count();
     }
 
     @DeleteMapping("/{movieId}")

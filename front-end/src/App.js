@@ -1,52 +1,23 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react'
+import { Redirect, Route } from "react-router-dom"
+import { MemberDelete, MemberDetail, MemberList, MemberLogin, MemberModify, MemberRegister } from 'member'
+import { Home, Member} from 'templates'
+import { BrowserRouter as Router } from 'react-router-dom'
 
-const App = () => { //람다식
-  return (
-  <>
-    <div class="body_container">
+const App = () => {
+  return (<div>
+    <Router>
+   
+        <Route exact path='/home' component={Home}/>
+        <Route exact path='/member-logout' component={Home}/>
+        <Redirect exact from={'/'} to={'/home'}/>
+        <Route exact path='/member' component={Member}/>
+        
+        <Route exact path='/member-login' component={MemberLogin}/>        
 
-    <header>
-      <div class="wrap">
-        <ul class="main-menu">
-          <li class="roomlist"><a href="roomlist.html">룸리스트</a></li>
-          <li class="community"><a href="community.html">커뮤니티</a></li>
-        </ul>
-      </div>
-      <ul class="sub-menu">
-        <li class="reserve">예약<a href="reserve.html"></a></li>
-        <li class="login">로그인<a href=""></a></li>
-      </ul>
-    </header>
 
-    <section class="main_container clear">
-      <article class="main_section">
-       
-        <div class="abc">
-          <h1>
-            <span class="article_title">메인페이지</span>
-          </h1>
-          <p id="dynamic" class="lg-text">
-            
-          </p>
-          <p class="sm-text">sub</p>
-        </div>
-        <script src="js/index.js">
-        </script>
-
-        </article>
-      
-      <article class="placeRoomlist">
-        <h1>룸리스트 공간</h1>
-      </article>
-    
-    </section>
-    <footer>
-      <div class="wrap">풋터</div>
-    </footer>
-  </div> 
-  </>
-  );
+    </Router>
+  </div>)
 }
 
-export default App;
+export default App

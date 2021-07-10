@@ -1,15 +1,14 @@
 import logo from './logo.svg';
 import './App.css';
 
-const Movie = () => { //람다식
-  return (
-  <>
-    <div class="body_container">
+const Movie = () => {
+  return (<>
+<div class="body_container">
 
 <header>
   <div class="wrap">
     <ul class="main-menu">
-      <li class="roomlist"><a href="roomlist.html">룸리스트</a></li>
+      <li class="roomlist"><a href="roomlist.html">테스트 !!</a></li>
       <li class="community"><a href="community.html">커뮤니티</a></li>
     </ul>
   </div>
@@ -41,12 +40,17 @@ const Movie = () => { //람다식
   </article>
 
 </section>
+
 <footer>
+  
   <div class="wrap">풋터</div>
-</footer>
+
+  </footer>
+
 </div> 
-  </>
+     </>
   );
+ 
 }
 
 export default Movie;
